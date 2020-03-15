@@ -7,6 +7,7 @@ from gi.repository import Gtk, Gio
 import subprocess
 import re
 import logging
+import os
 
 
 def find_esp():
@@ -376,10 +377,10 @@ class EFIWindow(Gtk.Window):
                 self.store.apply_changes()
 
     def shutdown(self, *args):
-        info_dialog(self,"Not implemented","Info")
+        os.system("systemctl poweroff")
 
     def reboot(self, *args):
-        info_dialog(self,"Not implemented","Info")
+        os.system("systemctl reboot")
 
     def discard_warning(self):
         if self.store.pending_changes():
