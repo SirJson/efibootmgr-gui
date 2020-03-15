@@ -18,7 +18,7 @@ print('#' * 20, 'TEST', '#' * 20)
 for line in test:
 	print(repr(line))
 print('#' * 20, 'TEST', '#' * 20)
-  
+
 def run_efibootmgr_stub():
 	logging.debug("efibootmgr stub called and returned test data")
 	return test
